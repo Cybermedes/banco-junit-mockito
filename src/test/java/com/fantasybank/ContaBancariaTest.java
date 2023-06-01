@@ -13,4 +13,12 @@ public class ContaBancariaTest {
         conta.sacar(300);
         assertEquals(200, conta.getSaldo());
     }
+
+    //Teste para checar o metodo depositar()
+    @Test
+    public void testDepositar() {
+        ContaBancaria conta = new ContaBancaria(400, 0);
+        conta.depositar(500);
+        assertEquals(900. conta.getSaldo());
+    }
 }
