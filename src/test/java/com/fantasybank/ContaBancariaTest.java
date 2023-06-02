@@ -43,4 +43,13 @@ public class ContaBancariaTest {
         ContaBancaria contaBancaria = new ContaBancaria(500, 0);
         assertTrue(contaBancaria.isActive());
     }
+
+    //Teste para checar se o campo do cliente está null ou não
+    @Test
+    @DisplayName("Teste para definir o nome do cliente")
+    public void testNomeCliente() {
+        ContaBancaria contaBancaria = new ContaBancaria(500, 0);
+        contaBancaria.setCliente("Bryan");
+        assertNotNull(contaBancaria.getCliente());
+    }
 }
