@@ -5,6 +5,7 @@ public class ContaBancaria {
     private double saldo;
     private double saldoMinimo;
     private boolean isActive = true;
+    private String cliente;
 
     public ContaBancaria(double saldo, double saldoMinimo) {
         this.saldo = saldo;
@@ -25,6 +26,14 @@ public class ContaBancaria {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+
+    public String getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
     }
 
     public double sacar(double quantia) {
