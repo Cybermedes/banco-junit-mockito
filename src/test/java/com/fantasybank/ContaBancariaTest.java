@@ -35,4 +35,12 @@ public class ContaBancariaTest {
         contaBancaria.sacar(800);
         assertNotEquals(0, contaBancaria.getSaldo());
     }
+
+    //Teste para checar se a conta está ativa após a instância
+    @Test
+    @DisplayName("Teste para confirmar se conta está ativa")
+    public void testAtiva() {
+        ContaBancaria contaBancaria = new ContaBancaria(500, 0);
+        assertTrue(contaBancaria.isActive());
+    }
 }
