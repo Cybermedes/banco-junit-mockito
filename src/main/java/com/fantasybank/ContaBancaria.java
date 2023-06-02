@@ -4,6 +4,7 @@ public class ContaBancaria {
 
     private double saldo;
     private double saldoMinimo;
+    private boolean isActive = true;
 
     public ContaBancaria(double saldo, double saldoMinimo) {
         this.saldo = saldo;
@@ -16,6 +17,14 @@ public class ContaBancaria {
 
     public double getSaldoMinimo() {
         return saldoMinimo;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     public double sacar(double quantia) {
