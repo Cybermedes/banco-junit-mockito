@@ -26,4 +26,13 @@ public class ContaBancariaTest {
         conta.depositar(500);
         assertEquals(900, conta.getSaldo());
     }
+
+    //Teste para checar se o saldo pode ter um valor negativo
+    @Test
+    @DisplayName("Saldo com valor negativo")
+    public void testSaqueNaoNulo() {
+        ContaBancaria contaBancaria = new ContaBancaria(500, -1000);
+        contaBancaria.sacar(800);
+        assertNotEquals(0, contaBancaria.getSaldo());
+    }
 }
