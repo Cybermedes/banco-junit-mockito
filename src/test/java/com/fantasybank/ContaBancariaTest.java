@@ -52,4 +52,20 @@ public class ContaBancariaTest {
         contaBancaria.setCliente("Bryan");
         assertNotNull(contaBancaria.getCliente());
     }
+
+    //Testa para verificar se pode sacar menos do que o saldo minimo
+    @Test
+    @DisplayName("Teste se valor do saque pode ultrapassar saldo minimo")
+    public void testSaqueMenorMinimo() {
+        ContaBancaria contaBancaria = new ContaBancaria(500, -1000);
+        assertThrows(RuntimeException.class, () -> contaBancaria.sacar(2000));
+    }
+
+    //Testa para verificar se metodos não irão lançar nenhuma exception
+    @Test
+    @DisplayName("Testa se não há exception ao usar metodo sacar e depositar")
+    public void testSaqueDespositoNoException() {
+        ContaBancaria contaBancaria = new ContaBancaria(500, -1000);
+        assertAll(() -> contaBancaria.depositar(200), () -> contaBancaria.sacar(450));
+    }
 }
