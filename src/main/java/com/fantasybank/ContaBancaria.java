@@ -4,7 +4,7 @@ public class ContaBancaria {
 
     private double saldo;
     private double saldoMinimo;
-    private boolean isActive = true;
+    private boolean contaAtiva = true;
     private String cliente;
 
     public ContaBancaria(double saldo, double saldoMinimo) {
@@ -20,8 +20,8 @@ public class ContaBancaria {
         return saldoMinimo;
     }
 
-    public boolean isActive() {
-        return isActive;
+    public boolean isContaAtiva() {
+        return contaAtiva;
     }
 
     public void setSaldo(double saldo) {

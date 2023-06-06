@@ -47,7 +47,7 @@ public class ContaBancariaTest {
     public void testAtiva() {
         ContaBancaria contaBancaria = new ContaBancaria(500, 0);
 
-        assertTrue(contaBancaria.isActive());
+        assertTrue(contaBancaria.isContaAtiva());
     }
 
     //Teste para checar se o campo do cliente está null ou não
